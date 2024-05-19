@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter,HashRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SignUp from "./components/SignUp";
@@ -18,7 +18,8 @@ function App() {
     <div className="App">
       {/* if We are applying any type of routing then we will keep that component in the BrowserRouter else we can keep outside or inside it's our choice.*/}
 
-      <BrowserRouter>
+      {/* <BrowserRouter> */ }
+      <HashRouter>
         <Navbar />
         <Routes>
 
@@ -36,7 +37,8 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
         </Routes>
         <Footer />
-      </BrowserRouter>
+        </HashRouter>
+      {/* </BrowserRouter> */}
     </div>
   );
 }
